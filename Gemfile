@@ -27,6 +27,8 @@ gem 'pg'
 
 gem 'enumerize'
 
+gem 'countries'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

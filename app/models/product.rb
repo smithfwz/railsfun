@@ -2,6 +2,7 @@ class Product < ActiveRecord::Base
 	extend Enumerize
 
 	enumerize :difficulty_level, in: [:easy, :medium, :hard]
+	enumerize :country, in: Country.all.map { |name, code| code }
 
 	belongs_to :category
 
