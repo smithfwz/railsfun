@@ -8,6 +8,7 @@
 			<th>Country</th>
 			<th>Category</th>
 			<th>Published</th>
+			<th>Detail</th>
 		</tr>
 	</thead>
 
@@ -20,6 +21,10 @@
 				<th><%= product.country %></th>
 				<th><%= product.category.title %></th>
 				<th><%= product.published %></th>
+				<th>
+					<!--<a href="<%= product_path(product) %>">Detail</a>-->
+					<%= link_to 'Detail', product_path(product) %>
+				</th>
 			</tr>
 		<% end %>
 	</tbody>
