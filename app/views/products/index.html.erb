@@ -1,0 +1,27 @@
+<table width="70%" style="margin:50px auto;" border='1'>
+
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Country</th>
+			<th>Category</th>
+			<th>Published</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @products.each do |product| %>
+			<tr>
+				<th><%= product.title %></th>
+				<th><%= product.description %></th>
+				<th><%= product.price %></th>
+				<th><%= product.country %></th>
+				<th><%= product.category.title %></th>
+				<th><%= product.published %></th>
+			</tr>
+		<% end %>
+	</tbody>
+
+</table>
