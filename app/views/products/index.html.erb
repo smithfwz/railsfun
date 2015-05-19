@@ -8,14 +8,14 @@
 			<th>Country</th>
 			<th>Category</th>
 			<th>Published</th>
-			<th>Detail</th>
+			<th></th>
 		</tr>
 	</thead>
 
 	<tbody>
 		<% @products.each do |product| %>
 			<tr>
-				<th><%= product.title %></th>
+				<th><a href="<%= product_path(product) %>"><%= product.title %></a></th>
 				<th><%= product.description %></th>
 				<th><%= product.price %></th>
 				<th><%= product.country %></th>
@@ -23,7 +23,7 @@
 				<th><%= product.published %></th>
 				<th>
 					<!--<a href="<%= product_path(product) %>">Detail</a>-->
-					<%= link_to 'Detail', product_path(product) %>
+					<%= link_to('Create', new_product_path) %>
 				</th>
 			</tr>
 		<% end %>
