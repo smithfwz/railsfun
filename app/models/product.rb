@@ -9,4 +9,4 @@ class Product < ActiveRecord::Base
 			errors.add(:description, 'can\'t be shorter than title')
 		end
 	end
-end 
+end
