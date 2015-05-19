@@ -1,4 +1,6 @@
 class Product < ActiveRecord::Base
+	belongs_to :category
+
 	before_validation :strip_html_from_description
 	before_save :change_title_to_downcase
 
