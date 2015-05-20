@@ -1,0 +1,7 @@
+.page_title {
+	border: $border;
+	color: $color;
+	font-size: $font-size;
+	
+	@include border-radius(20px);
+}
