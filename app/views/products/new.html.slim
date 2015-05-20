@@ -1,0 +1,10 @@
+#product_new
+	.product_form= semantic_form_for @product do |f|
+		.title= f.input :title
+		.description= f.input :description
+		.price= f.input :price, min: 0.01
+		.published= f.input :published
+		.category= f.input :category
+		.difficulty_level= f.input :difficulty_level
+		.country= f.input :country, as: :select, collection: Country.all
+		.action= f.action :submit
